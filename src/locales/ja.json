@@ -1,0 +1,12 @@
+{
+  "title": "製品画像マネージャー",
+  "addImages": "画像を追加",
+  "dragDrop": "ここに画像をドラッグ＆ドロップするか、クリックしてアップロード",
+  "supports": "対応フォーマット: JPG, PNG, GIF",
+  "imagePreview": "画像プレビュー",
+  "save": "保存",
+  "edit": "編集",
+  "delete": "削除",
+  "moveBackward": "後ろに移動",
+  "moveForward": "前に移動"
+}

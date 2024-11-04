@@ -7,12 +7,12 @@
 
 .image-container {
   position: relative;
-  border: 1px solid #eee;
-  padding: 10px;
+  border: 1px solid var(--color-border-lighter);
+  padding: 5px;
   border-radius: 4px;
   cursor: move;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: var(--color-background);
+  box-shadow: 0 2px 5px var(--color-shadow);
   height: 300px;
 }
 
@@ -29,15 +29,15 @@
 
 .dropdown {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 5px;
+  right: 5px;
 }
 
 .edit-button {
   opacity: 0.6;
   padding: 12px 24px;
-  background-color: #007bff;
-  color: white;
+  background-color: var(--color-edit-button);
+  color: var(--color-text-white);
   border: none;
   border-radius: 0 0 0 10px;
   cursor: pointer;
@@ -46,18 +46,18 @@
 
 .edit-button:hover {
   opacity: 1;
-  background-color: #0056b3;
+  background-color: var(--color-edit-button-hover);
 }
 
 .dropdown-menu {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: white;
-  border: 1px solid #ddd;
+  background-color: var(--color-dropdown-background);
+  border: 1px solid var(--color-dropdown-border-lighter);
   border-radius: 0 0 0 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  min-width: 150px;
+  box-shadow: 0 2px 8px var(--color-shadow-deep);
+  min-width: 200px;
   z-index: 1000;
   padding: 5px 0;
   display: none;
@@ -82,14 +82,14 @@
 }
 
 .dropdown-item:hover {
-  background-color: #f1f1f1;
+  background-color: var(--color-hover);
 }
 
 .delete-button {
-  color: #dc3545;
+  color: var(--color-error);
 }
 
 .move-button:disabled {
-  color: #6c757d;
+  color: var(--color-move-disabled);
   cursor: not-allowed;
 }

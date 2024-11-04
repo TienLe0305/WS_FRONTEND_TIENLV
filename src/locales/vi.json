@@ -1,0 +1,12 @@
+{
+    "title": "Quản lý Hình ảnh Sản phẩm",
+    "addImages": "Thêm Hình ảnh",
+    "dragDrop": "Kéo & Thả hình ảnh vào đây hoặc Click để Tải lên",
+    "supports": "Hỗ trợ: JPG, PNG, GIF",
+    "imagePreview": "Xem trước hình ảnh",
+    "save": "Lưu",
+    "edit": "Chỉnh sửa",
+    "delete": "Xóa",
+    "moveBackward": "Di chuyển lùi",
+    "moveForward": "Di chuyển tiến"
+}

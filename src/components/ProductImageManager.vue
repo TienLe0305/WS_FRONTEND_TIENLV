@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import '@/assets/main.css'
+import { useImageManager } from '@/composables/useImageManager'
 import ImageUpload from './ImageUpload.vue'
 import ProductList from './ProductList.vue'
-import { useImageManager } from '@/composables/useImageManager';
 
 const {
   images,
@@ -16,7 +16,7 @@ const {
   deleteImage,
   saveImages,
   moveImageForward,
-  moveImageBackward
+  moveImageBackward,
 } = useImageManager()
 </script>
 
@@ -37,12 +37,26 @@ const {
       :moveImageBackward="moveImageBackward"
     />
 
-    <button 
-      @click="saveImages"
-      class="save-button"
-      :disabled="!images.length"
-    >
+    <button @click="saveImages" class="save-button" :disabled="!images.length">
       Save
     </button>
   </div>
 </template>
+
+<style scoped>
+.save-button {
+  padding: 10px 20px;
+  background-color: var(--color-primary);
+  color: var(--color-text-white);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 20px 0;
+  min-width: 30%;
+  float: right;
+}
+.save-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+</style>

@@ -30,16 +30,18 @@
 
     <div class="image-preview" v-if="previews.length">
       <h3>Image Preview</h3>
-      <div class="preview-item" v-for="(src, index) in previews" :key="index">
-        <img
-          :key="index"
-          :src="src"
-          alt="Image Preview"
-          class="preview-image"
-        />
-        <button class="remove-button" @click="removeImage(index)">
-          &times;
-        </button>
+      <div class="preview-items">
+        <div class="preview-item" v-for="(src, index) in previews" :key="index">
+          <img
+            :key="index"
+            :src="src"
+            alt="Image Preview"
+            class="preview-image"
+          />
+          <button class="remove-button" @click="removeImage(index)">
+            &times;
+          </button>
+        </div>
       </div>
       <button
         class="add-button"
