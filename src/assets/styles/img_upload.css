@@ -1,3 +1,4 @@
+/* [src/assets/styles/img_upload.css] */
 .upload-container {
   display: flex;
   flex-direction: column;
@@ -8,19 +9,19 @@
 .dropzone {
   position: relative;
   height: 200px;
-  border: 2px dashed #ccc;
+  border: 2px dashed var(--color-border-dashed);
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
-  background-color: #f8f9fa;
+  background-color: var(--color-background-light);
   cursor: pointer;
 }
 
 .dropzone-active {
-  border-color: #4caf50;
-  background-color: #f0f8f0;
+  border-color: var(--color-primary);
+  background-color: var(--color-background-drag-active);
 }
 
 .dropzone-content {
@@ -34,7 +35,7 @@
 
 .upload-icon {
   margin-bottom: 15px;
-  color: #666;
+  color: var(--color-upload-icon);
 }
 
 .upload-icon svg {
@@ -45,17 +46,17 @@
 .dropzone-text {
   font-size: 1.2em;
   margin-bottom: 8px;
-  color: #333;
+  color: var(--color-dropzone-text);
 }
 
 .upload-hint {
   font-size: 0.9em;
-  color: #666;
+  color: var(--color-upload-hint);
 }
 
 .file-input {
   padding: 10px;
-  border: 2px dashed #ccc;
+  border: 2px dashed var(--color-border-dashed);
   border-radius: 4px;
   width: 100%;
   display: none;
@@ -75,15 +76,15 @@
   width: 100px;
   height: 100px;
   object-fit: cover;
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-border-light);
   border-radius: 4px;
 }
 
 .add-button {
   margin-top: 15px;
   padding: 10px 20px;
-  background-color: #4caf50;
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-text-white);
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -91,10 +92,31 @@
 }
 
 .add-button:disabled {
-  background-color: #a5d6a7;
+  background-color: var(--color-primary-disabled);
   cursor: not-allowed;
 }
 
 .add-button:not(:disabled):hover {
-  background-color: #45a049;
+  background-color: var(--color-primary-hover);
+}
+
+.preview-items {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.preview-item {
+  position: relative;
+}
+
+.remove-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  color: var(--color-error);
+  cursor: pointer;
 }
