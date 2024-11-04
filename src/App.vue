@@ -1,7 +1,13 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import ProductImageManager from './components/ProductImageManager.vue';
+</script>
 
 <template>
-  <h1>WS</h1>
+  <div>
+    <h1 class="title">Product Image Manager</h1>
+    <ProductImageManager />
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+</style>

@@ -1,0 +1,40 @@
+@media (max-width: 480px) {
+  .images-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 8px;
+  }
+
+  .delete-button {
+    padding: 3px 6px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .upload-container {
+    grid-template-columns: 1fr;
+  }
+
+  .dropzone {
+    height: 150px;
+  }
+
+  .images-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+  }
+
+  .edit-button {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+
+  .dropdown-menu {
+    min-width: 120px;
+    top: 35px;
+  }
+
+  .dropdown-item {
+    padding: 6px 12px;
+  }
+}

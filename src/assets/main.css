@@ -1,0 +1,10 @@
+@import './styles/components.css';
+@import './styles/img_upload.css';
+@import './styles/product_list.css';
+@import './styles/responsive.css';
+
+#app {
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
