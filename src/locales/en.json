@@ -1,12 +1,12 @@
 {
-    "title": "Product Image Manager",
-    "addImages": "Add Images",
-    "dragDrop": "Drag & Drop images here or Click to Upload",
-    "supports": "Supports: JPG, PNG, GIF",
-    "imagePreview": "Image Preview",
-    "save": "Save",
-    "edit": "Edit",
-    "delete": "Delete",
-    "moveBackward": "Move Backward",
-    "moveForward": "Move Forward"
-  }
+  "title": "Product Image Manager",
+  "addImages": "Add Images",
+  "dragDrop": "Drag & Drop images here or Click to Upload",
+  "supports": "Supports: JPG, PNG, GIF",
+  "imagePreview": "Image Preview",
+  "save": "Save",
+  "edit": "Edit",
+  "delete": "Delete",
+  "moveBackward": "Move Backward",
+  "moveForward": "Move Forward"
+}

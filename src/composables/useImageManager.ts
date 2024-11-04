@@ -2,8 +2,8 @@ import { ref, onMounted } from 'vue'
 import axios from 'axios'
 
 export interface ImageItem {
-  id: string;
-  url: string;
+  id: string
+  url: string
 }
 
 export function useImageManager() {
@@ -24,17 +24,16 @@ export function useImageManager() {
   }
 
   const handleFileUpload = async (files: FileList | File[]) => {
-    const validFiles = Array.from(files).filter(file => 
-      file.type.startsWith('image/') && 
-      file.size <= 5 * 1024 * 1024
+    const validFiles = Array.from(files).filter(
+      file => file.type.startsWith('image/') && file.size <= 5 * 1024 * 1024,
     )
 
     for (const file of validFiles) {
       const reader = new FileReader()
-      reader.onload = (e) => {
+      reader.onload = e => {
         const newImage: ImageItem = {
           id: crypto.randomUUID(),
-          url: e.target?.result as string
+          url: e.target?.result as string,
         }
         images.value.push(newImage)
         saveToLocalStorage()
@@ -57,12 +56,12 @@ export function useImageManager() {
 
   const handleDrop = (dropIndex: number) => {
     if (draggedIndex.value === -1 || !draggedItem.value) return
-    
+
     const imagesCopy = [...images.value]
     imagesCopy.splice(draggedIndex.value, 1)
     imagesCopy.splice(dropIndex, 0, draggedItem.value)
     images.value = imagesCopy
-    
+
     handleDragEnd()
     saveToLocalStorage()
   }
@@ -75,7 +74,7 @@ export function useImageManager() {
   const saveImages = async () => {
     try {
       const response = await axios.post('https://httpbin.org/post', {
-        images: images.value
+        images: images.value,
       })
       console.log('Images saved successfully:', response.data)
       return true
@@ -87,23 +86,23 @@ export function useImageManager() {
 
   const moveImageForward = (index: number) => {
     if (index < images.value.length - 1) {
-      const imagesCopy = [...images.value];
-      const [movedImage] = imagesCopy.splice(index, 1);
-      imagesCopy.splice(index + 1, 0, movedImage);
-      images.value = imagesCopy;
-      saveToLocalStorage();
+      const imagesCopy = [...images.value]
+      const [movedImage] = imagesCopy.splice(index, 1)
+      imagesCopy.splice(index + 1, 0, movedImage)
+      images.value = imagesCopy
+      saveToLocalStorage()
     }
-  };
-  
+  }
+
   const moveImageBackward = (index: number) => {
     if (index > 0) {
-      const imagesCopy = [...images.value];
-      const [movedImage] = imagesCopy.splice(index, 1);
-      imagesCopy.splice(index - 1, 0, movedImage);
-      images.value = imagesCopy;
-      saveToLocalStorage();
+      const imagesCopy = [...images.value]
+      const [movedImage] = imagesCopy.splice(index, 1)
+      imagesCopy.splice(index - 1, 0, movedImage)
+      images.value = imagesCopy
+      saveToLocalStorage()
     }
-  };
+  }
 
   return {
     images,
@@ -117,6 +116,6 @@ export function useImageManager() {
     deleteImage,
     saveImages,
     moveImageForward,
-    moveImageBackward
-  };
+    moveImageBackward,
+  }
 }

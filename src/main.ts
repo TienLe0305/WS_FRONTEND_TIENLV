@@ -10,7 +10,7 @@ import ja from './locales/ja.json'
 const messages = {
   en,
   vi,
-  ja
+  ja,
 }
 
 const i18n = createI18n({

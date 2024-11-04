@@ -1,47 +1,47 @@
 :root {
-    /* Background Colors */
-    --color-background: #ffffff;
-    --color-background-light: #f8f9fa;
-    --color-background-drag-active: #f0f8f0;
-    --color-dropdown-background: #ffffff;
-  
-    /* Border Colors */
-    --color-border: #cccccc;
-    --color-border-light: #ccc;
-    --color-border-lighter: #eee;
-    --color-border-dashed: #ccc;
-    --color-dropdown-border: #cccccc;
-    --color-dropdown-border-lighter: #ddd;
-  
-    /* Text Colors */
-    --color-text: #666666;
-    --color-text-white: #ffffff;
-    --color-dropzone-text: #333333;
-    --color-upload-hint: #666666;
-  
-    /* Icon Colors */
-    --color-upload-icon: #666666;
-  
-    /* Primary Colors */
-    --color-primary: #4caf50;
-    --color-primary-hover: #45a049;
-    --color-primary-disabled: #a5d6a7;
-  
-    /* Button Colors */
-    --color-edit-button: #007bff;
-    --color-edit-button-hover: #0056b3;
-  
-    /* Error Colors */
-    --color-error: #dc3545;
-  
-    /* Hover and Active Colors */
-    --color-hover: #f0f0f0;
-    --color-active: #e0e0e0;
-  
-    /* Disabled Colors */
-    --color-move-disabled: #6c757d;
-  
-    /* Shadow Colors */
-    --color-shadow: rgba(0, 0, 0, 0.1);
-    --color-shadow-deep: rgba(0, 0, 0, 0.15);
-  }
+  /* Background Colors */
+  --color-background: #ffffff;
+  --color-background-light: #f8f9fa;
+  --color-background-drag-active: #f0f8f0;
+  --color-dropdown-background: #ffffff;
+
+  /* Border Colors */
+  --color-border: #cccccc;
+  --color-border-light: #ccc;
+  --color-border-lighter: #eee;
+  --color-border-dashed: #ccc;
+  --color-dropdown-border: #cccccc;
+  --color-dropdown-border-lighter: #ddd;
+
+  /* Text Colors */
+  --color-text: #666666;
+  --color-text-white: #ffffff;
+  --color-dropzone-text: #333333;
+  --color-upload-hint: #666666;
+
+  /* Icon Colors */
+  --color-upload-icon: #666666;
+
+  /* Primary Colors */
+  --color-primary: #4caf50;
+  --color-primary-hover: #45a049;
+  --color-primary-disabled: #a5d6a7;
+
+  /* Button Colors */
+  --color-edit-button: #007bff;
+  --color-edit-button-hover: #0056b3;
+
+  /* Error Colors */
+  --color-error: #dc3545;
+
+  /* Hover and Active Colors */
+  --color-hover: #f0f0f0;
+  --color-active: #e0e0e0;
+
+  /* Disabled Colors */
+  --color-move-disabled: #6c757d;
+
+  /* Shadow Colors */
+  --color-shadow: rgba(0, 0, 0, 0.1);
+  --color-shadow-deep: rgba(0, 0, 0, 0.15);
+}

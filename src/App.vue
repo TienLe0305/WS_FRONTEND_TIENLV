@@ -11,7 +11,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import ProductImageManager from './components/ProductImageManager.vue'
-import LanguageSelector from './components/LanguageSelector.vue';
+import LanguageSelector from './components/LanguageSelector.vue'
 
 const { t } = useI18n()
 </script>
