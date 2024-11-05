@@ -28,7 +28,7 @@
               :disabled="index === 0"
             >
               <IconBack />
-              {{ t('moveBackward') }}
+              {{ t('moveLeft') }}
             </button>
 
             <button
@@ -37,7 +37,7 @@
               :disabled="index === images.length - 1"
             >
               <IconNext />
-              {{ t('moveForward') }}
+              {{ t('moveRight') }}
             </button>
 
             <button

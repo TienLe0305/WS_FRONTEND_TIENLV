@@ -9,7 +9,7 @@
       :moveImageBackward="moveImageBackward"
     />
 
-    <button @click="saveImages" class="save-button" :disabled="!images.length">
+    <button @click="saveImages" class="save-button" :disabled="!images.length" v-if="images.length">
       {{ t('save') }}
     </button>
   </div>
