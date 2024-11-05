@@ -5,6 +5,7 @@
       <LanguageSelector />
     </header>
     <ProductImageManager />
+    <ToastUI />
   </div>
 </template>
 
@@ -12,6 +13,7 @@
 import { useI18n } from 'vue-i18n'
 import ProductImageManager from './components/ProductImageManager.vue'
 import LanguageSelector from './components/LanguageSelector.vue'
+import ToastUI from './components/ToastUI.vue'
 
 const { t } = useI18n()
 </script>

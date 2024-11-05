@@ -2,7 +2,7 @@
   "title": "Quản lý Hình ảnh Sản phẩm",
   "addImages": "Thêm Hình ảnh",
   "dragDrop": "Kéo & Thả hình ảnh vào đây hoặc Click để Tải lên",
-  "supports": "Hỗ trợ: JPG, PNG, GIF",
+  "supports": "Hỗ trợ: JPG, PNG, JPEG",
   "imagePreview": "Xem trước hình ảnh",
   "save": "Lưu",
   "edit": "Chỉnh sửa",
@@ -10,5 +10,13 @@
   "moveBackward": "Di chuyển lùi",
   "moveForward": "Di chuyển tiến",
   "previous": "Trước",
-  "next": "Tiếp theo"
+  "next": "Tiếp theo",
+  "toast": {
+    "uploadError": "Chỉ cho phép tải lên các tệp JPEG, JPG và PNG với kích thước tối đa 5MB.",
+    "uploadSuccess": "Tải hình ảnh thành công.",
+    "deleteSuccess": "Xóa hình ảnh thành công.",
+    "deleteError": "Xóa hình ảnh không thành công.",
+    "saveSuccess": "Lưu hình ảnh thành công.",
+    "saveError": "Lỗi khi lưu hình ảnh."
+  }
 }

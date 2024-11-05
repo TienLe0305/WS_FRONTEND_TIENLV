@@ -22,8 +22,11 @@ import axios from 'axios'
 import ImageUpload from './ImageUpload.vue'
 import ProductList from './ProductList.vue'
 import { useI18n } from 'vue-i18n'
+import { useToastStore } from '@/store/toastStore'
+import { TOAST_MESSAGES } from '@/constants/toastMessages'
 
 const { t } = useI18n()
+const toastStore = useToastStore()
 
 interface ImageItem {
   id: string
@@ -33,9 +36,15 @@ interface ImageItem {
 const images = ref<ImageItem[]>([])
 
 const handleFileUpload = async (files: FileList | File[]) => {
+  const allowedTypes = ['image/jpg', 'image/jpeg', 'image/png']
   const validFiles = Array.from(files).filter(
-    file => file.type.startsWith('image/') && file.size <= 5 * 1024 * 1024,
+    file => allowedTypes.includes(file.type) && file.size <= 5 * 1024 * 1024,
   )
+
+  if (validFiles.length !== files.length) {
+    toastStore.addToast(TOAST_MESSAGES.UPLOAD_ERROR, 'error')
+  }
+
   for (const file of validFiles) {
     const reader = new FileReader()
     reader.onload = e => {
@@ -45,6 +54,7 @@ const handleFileUpload = async (files: FileList | File[]) => {
       }
       images.value.push(newImage)
       saveToLocalStorage()
+      toastStore.addToast(TOAST_MESSAGES.UPLOAD_SUCCESS, 'success')
     }
     reader.readAsDataURL(file)
   }
@@ -64,6 +74,7 @@ onMounted(() => {
 const deleteImage = (id: string) => {
   images.value = images.value.filter(img => img.id !== id)
   saveToLocalStorage()
+  toastStore.addToast(TOAST_MESSAGES.DELETE_SUCCESS, 'success')
 }
 
 const saveImages = async () => {
@@ -72,9 +83,11 @@ const saveImages = async () => {
       images: images.value,
     })
     console.log('Images saved successfully:', response.data)
+    toastStore.addToast(TOAST_MESSAGES.SAVE_SUCCESS, 'success')
     return true
   } catch (error) {
     console.error('Error saving images:', error)
+    toastStore.addToast(TOAST_MESSAGES.SAVE_ERROR, 'error')
     return false
   }
 }
