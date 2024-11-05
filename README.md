@@ -1,45 +1,66 @@
 # WS_FRONTEND_TIENLV
 
-This template should help get you started developing with Vue 3 in Vite.
+## Features
 
-## Recommended IDE Setup
+- Multiple image upload
+- Drag and drop reordering
+- Image deletion
+- Responsive design
+- Save functionality with API integration
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Technical Stack
 
-## Type Support for `.vue` Imports in TS
+- Vue.js 3
+- TypeScript
+- Vitest for unit testing
+- Axios for API calls
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+## Browser Support
 
-## Customize configuration
+Tested and verified on:
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+### Mobile Support
+- iOS Safari
+- Android Chrome
 
-## Project Setup
+## Setup
 
-```sh
+1. Install dependencies:
+```bash
 npm install
 ```
 
-### Compile and Hot-Reload for Development
-
-```sh
+2. Run development server:
+```bash
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
+3. Run tests:
+```bash
 npm run test:unit
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+## Responsive Design
 
-```sh
-npm run lint
-```
+The component is fully responsive with breakpoints at:
+- Desktop: > 768px
+- Tablet: 768px - 481px
+- Mobile: < 480px
+
+## Add-on functionality
+
+- Add image preview
+- i18n support
+- Pagination
+- Toast UI integration
+- Drag and drop image upload
+
+## Deploy
+
+- Using GitHub Actions for CI/CD
+- [GitHub Actions Documentation](https://docs.github.com/en/actions)
+- [GitHub Actions Guideline](https://viblo.asia/p/deploy-vuejs-project-len-githubio-trong-5-phut-Qbq5Q1WG5D8)
