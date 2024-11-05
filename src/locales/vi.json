@@ -8,5 +8,7 @@
   "edit": "Chỉnh sửa",
   "delete": "Xóa",
   "moveBackward": "Di chuyển lùi",
-  "moveForward": "Di chuyển tiến"
+  "moveForward": "Di chuyển tiến",
+  "previous": "Trước",
+  "next": "Tiếp theo"
 }

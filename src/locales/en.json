@@ -8,5 +8,7 @@
   "edit": "Edit",
   "delete": "Delete",
   "moveBackward": "Move Backward",
-  "moveForward": "Move Forward"
+  "moveForward": "Move Forward",
+  "previous": "Previous",
+  "next": "Next"
 }

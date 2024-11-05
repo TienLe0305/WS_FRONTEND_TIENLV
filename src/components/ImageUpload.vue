@@ -13,10 +13,10 @@
         <div class="upload-icon">
           <UploadIcon />
         </div>
-        <span class="dropzone-text"
-          >Drag & Drop images here or Click to Upload</span
-        >
-        <span class="upload-hint">Supports: JPG, PNG, GIF</span>
+        <span class="dropzone-text">
+          {{ t('dragDrop') }}
+        </span>
+        <span class="upload-hint">{{ t('supports') }}</span>
       </div>
       <input
         ref="fileInput"
@@ -29,7 +29,7 @@
     </div>
 
     <div class="image-preview" v-if="previews.length">
-      <h3>Image Preview</h3>
+      <h3>{{ t('imagePreview') }}</h3>
       <div class="preview-items">
         <div class="preview-item" v-for="(src, index) in previews" :key="index">
           <img
@@ -48,7 +48,7 @@
         @click="addImages"
         :disabled="!selectedFiles.length"
       >
-        Add Images
+        {{ t('addImages') }}
       </button>
     </div>
   </div>
@@ -57,10 +57,13 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import UploadIcon from './icons/IconUpload.vue'
+import { useI18n } from 'vue-i18n'
 
 interface Props {
   onUpload: (files: FileList | File[]) => void
 }
+
+const { t } = useI18n()
 
 const props = defineProps<Props>()
 
